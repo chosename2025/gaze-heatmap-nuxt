@@ -102,10 +102,20 @@ export default defineEventHandler(async (event) => {
       '--disable-accelerated-2d-canvas',
       '--no-first-run',
       '--no-zygote',
-      '--single-process',
-      '--disable-gpu'
+      '--disable-gpu',
+      '--disable-web-security',
+      '--disable-features=VizDisplayCompositor',
+      '--disable-background-timer-throttling',
+      '--disable-backgrounding-occluded-windows',
+      '--disable-renderer-backgrounding',
+      '--disable-ipc-flooding-protection',
+      '--memory-pressure-off',
+      '--max_old_space_size=4096',
     ],
     headless: true,
+    timeout: 60000,
+    protocolTimeout: 60000,
+    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined,
   });
   
   try {
