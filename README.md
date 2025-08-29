@@ -167,7 +167,7 @@ PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 
 ### Особенности Docker конфигурации
 
-- **Базовый образ:** Node.js 18 Alpine Linux
+- **Базовый образ:** Node.js 20 Alpine Linux
 - **Браузер:** Системный Chromium (предустановлен)
 - **Безопасность:** Непривилегированный пользователь `nuxt` (UID 1001)
 - **Память:** Увеличенный shared memory для стабильной работы браузера
