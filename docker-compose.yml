@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  gaze-heatmap:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    security_opt:
+      - seccomp:unconfined
+    shm_size: 1gb
